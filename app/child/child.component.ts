@@ -7,7 +7,12 @@ import { Component, OnInit ,Input} from '@angular/core';
 })
 export class ChildComponent implements OnInit {
 
-  @Input() message: string;
+  @Input() setMessage(msg) {
+    this.childMessage = msg;
+    console.log('this.childMessage: ', this.childMessage)
+  }
+
+  childMessage = ''
 
   constructor() { }
 
